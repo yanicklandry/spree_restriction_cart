@@ -1,0 +1,8 @@
+<% Spree::ContentChunk.where(:kind => 'product_unavailable').each do |chunk| %>
+  <div class="">
+    <h3><%= chunk.title %></h3>
+    <div><%= chunk.body.sub('___SKU___', @product.sku).html_safe %></div>
+  </div>
+<% end %>
+</div>
+<div style="display:none;">
