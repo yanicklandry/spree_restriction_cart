@@ -6,3 +6,4 @@ en:
   alerts: Alerts
   alerts_none: No alerts yet added
   alerts_remove: (Remove)
+  alert_must_be_logged: "Error : you must be logged in your account to have access to the Alerts functionality"
