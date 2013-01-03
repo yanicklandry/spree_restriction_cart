@@ -1,0 +1,7 @@
+<h1><%= t(:alerts) %></h1>
+<%= t(:alerts_none) if @products.empty? %>
+<ul>
+    <% @products.each do |product| %>
+    <li><%= link_to product.name, product %> <%= link_to t(:alerts_remove), "/availability_alerts/destroy?product=#{product.id}", :method => :delete %></li>
+    <% end %>
+</ul>

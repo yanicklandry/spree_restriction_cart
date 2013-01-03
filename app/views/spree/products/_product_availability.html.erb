@@ -2,6 +2,9 @@
   <div class="">
     <h3><%= chunk.title %></h3>
     <div><%= chunk.body.sub('___SKU___', @product.sku).html_safe %></div>
+    
+    <%= link_to t(:add_availability_alert), "/availability_alerts/?product=#{@product.id}", :product => @product.id, :method => :post %>
+    
   </div>
 <% end %>
 </div>

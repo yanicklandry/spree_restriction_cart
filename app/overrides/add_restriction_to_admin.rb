@@ -10,3 +10,11 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
     <% end %>
   </div>',
                      :disabled => false)
+
+Deface::Override.new(:virtual_path => "spree/admin/products/_form",
+:name => "admin_product_restriction2",
+:insert_bottom => "[data-hook='admin_product_form_additional_fields']",
+:text => '<h2><%= t(:alerts) %></h2>
+<textarea><%= Spree::AvailabilityAlertsController.list_with_product(@product) %></textarea>
+',
+ :disabled => false)
